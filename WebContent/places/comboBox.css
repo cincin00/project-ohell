@@ -1,0 +1,16 @@
+@CHARSET "EUC-KR";
+#comboBox{
+           position:absolute;
+           margin-left:750px;
+           *margin-left:-800px;
+           margin-top:200px;
+           display:none;
+           width:270px;
+           height:170px;
+           background-color:white;
+           border:8px solid #C1C1C1;
+           z-index:2000;
+           overflow-x:hidden; 
+           overflow-y:auto; 
+           *overflow-y:scroll; 
+}

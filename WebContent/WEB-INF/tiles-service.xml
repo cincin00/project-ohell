@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	<definition name="boardlist" template="/sitePublic/mainLayout.jsp" >
+		<put-attribute name="header" value="/sitePublic/mainForm.jsp" />
+		<put-attribute name="body" value="/board/listForm.jsp" />
+		<put-attribute name="footer" value="/sitePublic/footer.jsp" />
+	</definition>
+	<definition name="boardwrite" template="/sitePublic/mainLayout.jsp" >
+		<put-attribute name="header" value="/sitePublic/mainForm.jsp" />
+		<put-attribute name="body" value="/board/writeForm.jsp" />
+		<put-attribute name="footer" value="/sitePublic/footer.jsp" />
+	</definition>
+	<definition name="boardview" template="/sitePublic/mainLayout.jsp" >
+		<put-attribute name="header" value="/sitePublic/mainForm.jsp" />
+		<put-attribute name="body" value="/board/viewForm.jsp" />
+		<put-attribute name="footer" value="/sitePublic/footer.jsp" />
+	</definition> 
+	<definition name="festivallist" template="/sitePublic/mainLayout.jsp" >
+		<put-attribute name="header" value="/sitePublic/mainForm.jsp" />
+		<put-attribute name="body" value="/festival/festivalListForm.jsp" />
+		<put-attribute name="footer" value="/sitePublic/footer.jsp" />
+	</definition>
+	<definition name="festivalview" template="/sitePublic/mainLayout.jsp" >
+		<put-attribute name="header" value="/sitePublic/mainForm.jsp" />
+		<put-attribute name="body" value="/festival/festivalListForm.jsp" />
+		<put-attribute name="footer" value="/sitePublic/footer.jsp" />
+	</definition>
+	<definition name="festivalupdate" template="/sitePublic/mainLayout.jsp" >
+		<put-attribute name="header" value="/sitePublic/mainForm.jsp" />
+		<put-attribute name="body" value="/festival/festivalUpdateForm.jsp" />
+		<put-attribute name="footer" value="/sitePublic/footer.jsp" />
+	</definition>
+	<definition name="festivalwrite" template="/sitePublic/mainLayout.jsp" >
+		<put-attribute name="header" value="/sitePublic/mainForm.jsp" />
+		<put-attribute name="body" value="/festival/festivalWriteForm.jsp" />
+		<put-attribute name="footer" value="/sitePublic/footer.jsp" />
+	</definition>
+	<definition name="main" template="/sitePublic/mainLayout.jsp" >
+		<put-attribute name="header" value="/sitePublic/mainForm.jsp" />
+		<put-attribute name="body" value="/main/mainContents.jsp" />
+		<put-attribute name="footer" value="/sitePublic/footer.jsp" />
+	</definition>
+	<definition name="introduce" template="/sitePublic/mainLayout.jsp" >
+		<put-attribute name="header" value="/sitePublic/mainForm.jsp" />
+		<put-attribute name="body" value="/introduce/introduceForm.jsp" />
+		<put-attribute name="footer" value="/sitePublic/footer.jsp" />
+	</definition>
+</tiles-definitions>
