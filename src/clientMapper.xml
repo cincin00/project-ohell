@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="client">
+
+	<insert id="add" parameterType="client.ClientDataBean">
+		insert into client
+		values(#{id},#{passwd},#{name},#{email},#{age},#{address},#{phone},#{num},#{zipcode},#{sex},#{able},#{ask},#{answer})
+	</insert>
+	<update id="modify" parameterType="client.ClientDataBean">
+		update client set passwd=#{passwd},age=#{age},email=#{email},phone=#{phone},zipcode=#{zipcode},address=#{address},able=#{able} where id=#{id}
+	</update>
+	<delete id="remove" parameterType="java.lang.String">
+		delete from client where id=#{id}
+	</delete>
+	<select id="getlist" resultType="client.ClientDataBean">
+		select * from client
+	</select>
+	<select id="find" parameterType="String" resultType="client.ClientDataBean">
+		select * from client where id=#{id}
+	</select>
+	<select id="getclientnum" parameterType="String" resultType="hashmap">
+		select count(*) from client
+	</select>
+	<select id="findId" parameterType="String" resultType="client.ClientDataBean">
+		select * from client where name=#{name}
+	</select>
+	<select id="findPass"	parameterType="String" resultType="client.ClientDataBean">
+		select * from client where ask=#{ask} and answer=#{answer}
+	</select>
+</mapper>

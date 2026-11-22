@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="places">
+
+	<insert id="add" parameterType="places.PlaceData">
+		insert into places values(#{placeid},#{id_day},#{day},#{name},#{id},#{tel},#{detail},#{lon},#{lat},#{placenum})
+	</insert>
+	<delete id="remove" parameterType="java.lang.String">
+		delete from places where placeid=#{placeid}
+	</delete>
+	<select id="getlist" parameterType="java.lang.String" resultType="places.PlaceData">
+		select * from places where id_day=#{id_day}
+	</select>
+</mapper>

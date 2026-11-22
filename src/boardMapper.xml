@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="board">
+
+	<insert id="add" parameterType="board.BoardDataBean">
+		insert into board values(board_num.NEXTVAL,#{id_day},#{like_num},#{review},#{subject},#{id},#{img_path},#{plan_calendar})
+	</insert>
+	
+	<update id="modify" parameterType="board.BoardDataBean">
+		update board set id_day=#{id_day},review=#{review},subject=#{subject} where id=#{id}
+	</update>
+	
+	<delete id="remove" parameterType="java.lang.String">
+		delete from board where id=#{id}
+	</delete>
+	
+	<select id="getContent" resultType="board.BoardDataBean">
+		select * from board where boardnum=#{boardnum}
+	</select>
+	
+	<select id="getlist" resultType="board.BoardDataBean">
+		select * from board where boardnum between #{startRow} and #{endRow}
+	</select>
+	
+	<select id="getlistCount" resultType="java.lang.String">
+		select count(*) from board
+	</select>
+	
+	<select id="getReview" resultType="board.BoardDataBean">
+		select review from board where id=#{id}	
+	</select>
+	
+	<select id="getSubject" resultType="board.BoardDataBean">
+		select id_day from plan where id=#{id}	
+	</select>
+	
+	<select id="find" parameterType="String" resultType="board.BoardDataBean">
+		select * from board where id=#{id}
+	</select>
+	
+	<select id="getInfo" parameterType="String" resultType="hashmap">
+		select * from board where id=#{id}
+	</select> 
+	
+	<select id="getMainBoardList" parameterType="String" resultType="hashmap">
+		select * from board where rownum between 1 and 6
+	</select>
+</mapper>
